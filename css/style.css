@@ -146,6 +146,9 @@ body{
         height: 50vh;
     }
     .presentacion{
-        margin-top: 50%;
+        margin-top: 40%;
+    }
+    .presentacion h1{
+        font-size: 45px;
     }
 }

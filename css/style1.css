@@ -181,7 +181,7 @@ main a{
     main a{
         position: absolute;
         left: 40%;
-        top: 65%;
+        top: 75%;
         animation: bajar 3s ease-in-out;
     }
 }
