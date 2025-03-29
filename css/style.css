@@ -1,0 +1,151 @@
+/* Creado por: L3RightMC */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+@font-face {
+    font-family: "Hemg";
+    src: url(../font/HemgjordLettering_PERSONAL_USE_ONLY.otf);
+}
+@font-face {
+    font-family: "Simple";
+    src: url(../font/Simple\ Letter.otf);
+}
+@font-face {
+    font-family: "Sansburg";
+    src: url(../font/Sansburg.ttf);
+}
+@keyframes flotar{
+    0% {
+        transform: translateY(100vh) scale(0.5);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-10vh) scale(1.5);
+        opacity: 0;
+    }
+}
+@keyframes abajo-arriba {
+    0%{
+        transform: translateY(100px);
+        opacity: 0.1;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes abajo-arriba1 {
+    0%{
+        transform: translateY(200px);
+        opacity: 0.1;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes derecha-izquierda {
+    0%{
+        transform: translateX(-200px);
+        opacity: 0.1;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes izquierda-derecha {
+    0%{
+        transform: translateX(200px);
+        opacity: 0.1;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+body{
+    background-color: rgb(255, 100, 193);
+    color: black;
+    font-family: "Sansburg";
+}
+.corazones{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+}
+.corazon{
+    position: absolute;
+    color: red;
+    font-size: 20px;
+    opacity: 0.7;
+    animation: flotar 5s linear infinite;
+}
+.presentacion{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10%;
+    gap: 15px;
+}
+.presentacion h1{
+    font-size: 50px;
+    font-weight: 10;
+    font-family: "Hemg";
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+    transition: 0.3s ease-in-out;
+    animation: abajo-arriba 4s ease-in-out;
+}
+.presentacion h1:hover{
+    color: white;
+    cursor: default;
+}
+.presentacion img{
+    border-radius: 15px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    animation: abajo-arriba 6s ease-in-out;
+}
+.decision{
+    display: flex;
+    gap: 50px;
+    font-size: 20px;
+}
+.decision a, .decision button{
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    padding: 5px 25px;
+    border-radius: 5px;
+    transition: 0.5s ease-in-out;
+    z-index: 100;
+}
+.decision a:hover{
+    color: white;
+}
+.aceptar{
+    background-color: rgb(47, 255, 68);
+    animation: derecha-izquierda 5s ease-in-out;
+}
+#boton-a{
+    background-color: rgb(255, 60, 60);
+    animation: izquierda-derecha 5s ease-in-out;
+    cursor: pointer;
+    border: none;
+}
+@media (max-width: 480px){
+    body{
+        height: 50vh;
+    }
+    .presentacion{
+        margin-top: 50%;
+    }
+}
